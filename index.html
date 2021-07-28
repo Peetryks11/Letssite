@@ -69,7 +69,21 @@
 
 
 <body>
+	<div class="popup" id="popup-1">
+  <div class="overlay"></div>
+  <div class="content">
+    <div class="close-btn" onclick="togglePopup()">×</div>
+    <h1>PRZECZYTAJ</h1>
+	  <p> Nie możesz znaleść swoich wymarzonych Bucików?</p>
+	  <p> NIE MA PROBLEMU !</p>
+	  <p> Skontaktuj sie z nami korzystajac z okienka w prawym dolnym rogu </p>
+	  <p> <b>Podaj :</b></p>
+	  <p> -email</p>
+	  <p> -Firme oraz model buta ktory cie interesuje</p>
+	  <p>A my załatwimy je specjalnie dla ciebie ! i wystawimy na sklep :)</p>
 
+  </div>
+</div>
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
     <div class="container d-flex align-items-center justify-content-between">
@@ -637,7 +651,11 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+	<script>
+	function togglePopup(){
+  document.getElementById("popup-1").classList.toggle("active");
+}
+</script>
 </body>
 
 </html>
