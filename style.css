@@ -325,7 +325,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------------------------------------------------
-# Back to top button
+# Back to top 
 --------------------------------------------------------------*/
 .back-to-top {
   position: fixed;
@@ -1874,7 +1874,7 @@ section {
   display: flex;
   height: 50px;
   padding: 0;
-  background: #009578;
+  background: #333333;
   border: none;
   outline: none;
   border-radius: 5px;
