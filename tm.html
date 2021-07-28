@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szybka-Parka.pl</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  </head>
+   
+ 
+  <body>
+  
+ <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+	<div class="container2">
+<div id="smart-button-container">
+      <div style="text-align: center;">
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=PLN" data-sdk-integration-source="button-factory"></script>
+  <script>
+    function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'rect',
+          color: 'black',
+          layout: 'vertical',
+          label: 'buynow',
+          
+        },
+
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{"description":"Bluza Tommy Hilfiger Czarna","amount":{"currency_code":"PLN","value":60}}]
+          });
+        },
+
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(details) {
+            alert('Transaction completed by ' + details.payer.name.given_name + '!');
+          });
+        },
+
+        onError: function(err) {
+          console.log(err);
+        }
+      }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+  </script>
+  
+
+<p></p>
+<p></p>
+<p></p>
+<button type="button" onclick="togglePopup()" class="button" >
+  <span class="button__text">Informacje o komplecie</span>
+  
+</button>
+<button type="button" onclick="location.href='index.html';" class="button" >
+  <span class="button__text">&#129190;Wroc na strone</span>
+  
+</button>
+
+	<div class="popup" id="popup-1">
+  <div class="overlay"></div>
+  <div class="content">
+    <div class="close-btn" onclick="togglePopup()">×</div>
+    <h1>Informacje o butach</h1>
+    <p>Kolor: Czarny</p>
+	<p></p>
+	<p>Materiał: Materiał</p>
+	<p></p>
+	<p>Biust: 108cm | Talia: 86cm</p>
+	<p></p>
+	<p>Długość: 72cm</p>
+	<p></p>
+	<p>Rozmiar: L</p>
+	<p></p>
+	<p>Ramie: 47cm | Rękaw: 62cm</p>
+	<p></p>
+	<p>Opakowanie Producenta: Pudełko</p>
+	<p></p>
+	<p>Przeznaczenie: Dla Mężczyzn</p>
+	<p></p>
+	<p></p>
+	<p></p>
+	<b><font color="red">UWAGA</b></font><p><b> Na chwilę obecną dostępna jest tylko dostawa za pośrednictwem kuriera.</b></p>
+  </div>
+</div>
+ 
+	<p></p>
+
+		</div>
+<div class="lewo-gora">
+<p style="color: black;"><b>Szybka-Parka.pl</b></p>
+</div>
+    <div class="slider">
+      <div class="slide active">
+        <img src="tm1.JPG" alt="">
+        <div class="info">
+          <h2>Tommy Hilfiger</h2>
+<p> darmowa wysyłka kup teraz !!</p>
+        </div>
+      </div>
+      <div class="slide">
+	  
+
+	  <p></p>
+
+      <div class="navigation">
+        <i class="fas fa-chevron-left prev-btn"></i>
+        <i class="fas fa-chevron-right next-btn"></i>
+      </div>
+      <div class="navigation-visibility">
+        <div class="slide-icon active"></div>
+        <div class="slide-icon"></div>
+        <div class="slide-icon"></div>
+        <div class="slide-icon"></div>
+        <div class="slide-icon"></div>
+      </div>
+    </div>
+	<p></p>
+	
+	<p></p>
+
+	    <script type="text/javascript">
+    const slider = document.querySelector(".slider");
+    const nextBtn = document.querySelector(".next-btn");
+    const prevBtn = document.querySelector(".prev-btn");
+    const slides = document.querySelectorAll(".slide");
+    const slideIcons = document.querySelectorAll(".slide-icon");
+    const numberOfSlides = slides.length;
+    var slideNumber = 0;
+
+    //image slider next button
+    nextBtn.addEventListener("click", () => {
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+      slideIcons.forEach((slideIcon) => {
+        slideIcon.classList.remove("active");
+      });
+
+      slideNumber++;
+
+      if(slideNumber > (numberOfSlides - 1)){
+        slideNumber = 0;
+      }
+
+      slides[slideNumber].classList.add("active");
+      slideIcons[slideNumber].classList.add("active");
+    });
+
+    //image slider previous button
+    prevBtn.addEventListener("click", () => {
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+      slideIcons.forEach((slideIcon) => {
+        slideIcon.classList.remove("active");
+      });
+
+      slideNumber--;
+
+      if(slideNumber < 0){
+        slideNumber = numberOfSlides - 1;
+      }
+
+      slides[slideNumber].classList.add("active");
+      slideIcons[slideNumber].classList.add("active");
+    });
+
+    //image slider autoplay
+    var playSlider;
+
+    var repeater = () => {
+      playSlider = setInterval(function(){
+        slides.forEach((slide) => {
+          slide.classList.remove("active");
+        });
+        slideIcons.forEach((slideIcon) => {
+          slideIcon.classList.remove("active");
+        });
+
+        slideNumber++;
+
+        if(slideNumber > (numberOfSlides - 1)){
+          slideNumber = 0;
+        }
+
+        slides[slideNumber].classList.add("active");
+        slideIcons[slideNumber].classList.add("active");
+      }, 4000);
+    }
+    repeater();
+
+    //stop the image slider autoplay on mouseover
+    slider.addEventListener("mouseover", () => {
+      clearInterval(playSlider);
+    });
+
+    //start the image slider autoplay again on mouseout
+    slider.addEventListener("mouseout", () => {
+      repeater();
+    });
+    </script>
+	<script>
+	function togglePopup(){
+  document.getElementById("popup-1").classList.toggle("active");
+}
+</script>
+      
+  </body>
+</html>
+      
