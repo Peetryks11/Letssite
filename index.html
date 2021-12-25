@@ -1,16 +1,105 @@
+<style>
 
-<!-- Smartsupp Live Chat script -->
-<script type="text/javascript">
-var _smartsupp = _smartsupp || {};
-_smartsupp.key = '2ae114c3446c20575b9490add62bac9c9692b599';
-window.smartsupp||(function(d) {
-  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
-  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
-  c.type='text/javascript';c.charset='utf-8';c.async=true;
-  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
-})(document);
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #00bfff; 
+  border-radius: 0px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #0086b3; 
+}
+
+</style>
+<script>
+
+	follower = document.getElementById('follower')
+printout = document.getElementById('printout')
+
+mouseX = (event) =>
+  return event.clientX
+
+mouseY = (event) =>
+  return event.clientY
+
+positionElement = (event) =>
+  mouse = {
+    x: mouseX(event)
+    y: mouseY(event)
+  }
+  follower.style.top = mouse.y + 'px'
+  follower.style.left = mouse.x + 'px'
+
+timer = false
+window.onmousemove = init = (event) =>
+  _event = event
+  timer = setTimeout =>
+    positionElement(_event)
+  , 1
+</script>
+<script>
+var noBots = require('express-nobots');
+
+// must be the first middleware
+app.use(noBots());
 </script>
 
+
+<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="05f2b013-548d-49ae-9a10-067a897b2cee";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+<script>
+document.addEventListener("contextmenu", function(e){
+e.preventDefault();
+}, false);
+</script>
+<script language=javascript>
+    var rev = "fwd";
+    function titlebar(val){
+        var msg  = "FortniteShopping.com";
+        var res = " ";
+        var speed = 70;
+        var pos = val;
+        msg = "   "+msg+"|2018-2021";
+        var le = msg.length;
+        if(rev == "fwd"){
+            if(pos < le){
+                pos = pos+1;
+                scroll = msg.substr(0,pos);
+                document.title = scroll;
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+            else {
+                rev = "bwd";
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+        }
+        else {
+            if(pos > 0) {
+                pos = pos-1;
+                var ale = le-pos;
+                scrol = msg.substr(ale,le);
+                document.title = scrol;
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+            else {
+                rev = "fwd";
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+        }
+    }
+    titlebar(0);
+</script>
 
 
 <script>
@@ -53,173 +142,116 @@ window.onload = function () {
        }
 
 </script>
-<script src="devtools-detect/index.js" type="text/javascript"></script>
-	<script type="module">
-    window.addEventListener('devtoolschange', event => {
- 
-    window.location.href = "https://google.com/";
-    function windowClose() {
-    window.open('','_parent','');
-    window.close();
-    }
 
-    });
-	</script> 
 <!DOCTYPE html>
 <html lang="en">
 
-
-<!-- Mirrored from fortnitestore.xyz/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 23 Nov 2021 15:38:10 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>FortniteStore.xyz</title>
+  <title>FortniteShopping.com</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-
+  <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.html" rel="apple-touch-icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
 
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-
+  <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-
+  <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-
+  <!-- =======================================================
+  * Template Name: NewBiz - v4.6.0
+  * Template URL: https://bootstrapmade.com/newbiz-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
-	
-	
-	
-<style>
 
-/* width */
-::-webkit-scrollbar {
-  width: 9px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 0px grey; 
-  border-radius: 10px;
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #ffc451; 
-  border-radius: 0px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #ffbb33; 
-}
-
-</style>
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top ">
-    <div class="container d-flex align-items-center justify-content-lg-between">
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex justify-content-between">
 
-      <h1 class="logo me-auto me-lg-0"><a href="index-2.html">FortniteStore<span>.xyz</span></a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <div class="logo">
+        <!-- Uncomment below if you prefer to use an text logo -->
+        <!-- <h1><a href="index.html">NewBiz</a></h1> -->
+        <a href="index.html"><img src="assets/img/" alt="" class="img-fluid"></a><h2>FORTNITESHOPPING.COM</h2>
+      </div>
 
-      <nav id="navbar" class="navbar order-last order-lg-0">
+      <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="index-2.html">Shop</a></li>
-          <li><a class="nav-link scrollto" href="feedback.html">Feedback</a></li>
-          <li><a class="nav-link scrollto" href="refund.html">Refund</a></li>
-          <li><a class="nav-link scrollto " href="tos.html">T.O.S.</a></li>
-     
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#why-us">Shop</a></li>
+		          <li><a class="nav-link scrollto" onclick="togglePopup40()" href="#hero">T.O.S.</a></li>
 
  
+          
+          </li>
+        
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-   
-
     </div>
-  </header><!-- End Header -->
+  </header><!-- #header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center justify-content-center">
+  <section id="hero" class="clearfix">
     <div class="container" data-aos="fade-up">
 
-      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
-        <div class="col-xl-6 col-lg-8">
-          <h1>FortniteStore<span>.xyz</span></h1>
-          <h2>Most popular fortnite skins&Items shop!</h2>
-        </div>
+      <div class="hero-img" data-aos="zoom-out" data-aos-delay="200">
+        <img src="assets/img/hero-img.png" alt="" class="img-fluid">
       </div>
 
-      <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="ri-store-line"></i>
-            <h3><a href="#">Fast delivery</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="ri-bar-chart-box-line"></i>
-            <h3><a href="#">+400 Happy Clients</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="ri-calendar-todo-line"></i>
-            <h3><a href="#">Helpfull support</a></h3>
-          </div>
-        </div>
-
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="ri-database-2-line"></i>
-            <h3><a href="#">Cheapest prices</a></h3>
-          </div>
+      <div class="hero-info" data-aos="zoom-in" data-aos-delay="100">
+        <h2>FortniteShopping.com<br><span></span></h2><h2 style="font-size:25px;">Most Popular Fortnite account shop</h2>
+        <div>
+          <a href="#why-us" class="btn-get-started scrollto">SHOP</a>
+          <a href="#about" class="btn-services scrollto">ABOUT</a>
         </div>
       </div>
 
     </div>
-  </section>
+  </section><!-- End Hero Section -->
 
   <main id="main">
-			<div class="popup" id="popup-1">
+<div class="popup" id="popup-1">
   <div class="overlay"></div>
   <div class="content">
-    <div class="close-btn" onclick="togglePopup()">×</div>
+    <div class="close-btn" onclick="togglePopup1()">×</div>
     <h1>YOUR ORDER</h1>
 	<p></p>
 				 <img src="1.png" 
 			       width="200" 
 				   height="200" />
 				   </a>
-	  <p>BLACK KNIGHT OG FULL ACCESS ACCOUNT</p>
-	  <p>Additional skins: 120-130</p>
-	  
+	  <p>RENEGADE RAIDER ACCOUNT</p>
+	  <p>Additional Skins: 110-115</p>
+	 
+		
 	  <h4><sup class="description">$</sup>13,99<span></span></h4>
-	<input type="text" placeholder="Delivery E-mail adress"> </>
-	                
-                <a href="https://www.paypal.com/donate/?hosted_button_id=RFWLZTEYXC4UA" class="cta-btn">Pay With Paypal/Credit Card</a>
-           
+	<input type="text" style="color: grey; background-color: 131212;border: 3px solid #000000;" placeholder="Delivery E-mail adress"> </>
+		<p></p>
+	<p></p>
+<a class="cta-btn"  href="https://www.paypal.com/donate?hosted_button_id=72HEYXWW33L9J">BUY NOW!</a>
+
   </div>
 </div>
-			<div class="popup" id="popup-2">
+<div class="popup" id="popup-2">
   <div class="overlay"></div>
   <div class="content">
     <div class="close-btn" onclick="togglePopup2()">×</div>
@@ -229,119 +261,129 @@ window.onload = function () {
 			       width="200" 
 				   height="200" />
 				   </a>
-	  <p>RENEGADE RAIDER OG FULL ACCESS ACCOUNT</p>
-	  <p>Additional skins: 100-115</p>
-	  
+	  <p>BLACK KNIGHT ACCOUNT</p>
+	  <p>Additional Skins: 120-125</p>
+	 
+		
 	  <h4><sup class="description">$</sup>13,99<span></span></h4>
-	<input type="text" placeholder="Delivery E-mail adress"> </>
-	                
-    <a href="https://www.paypal.com/donate/?hosted_button_id=EZ2N5HUQEB8GQ" class="cta-btn">Pay With Paypal/Credit Card</a>
-           
-                
-           
+	<input type="text" style="color: grey; background-color: 131212;border: 3px solid #000000;" placeholder="Delivery E-mail adress"> </>
+		<p></p>
+	<p></p>
+<a class="cta-btn"  href="https://www.paypal.com/donate?hosted_button_id=T9Q4JQ38MLUCW">BUY NOW!</a>
+
   </div>
 </div>
-			<div class="popup" id="popup-3">
+<div class="popup" id="popup-3">
   <div class="overlay"></div>
   <div class="content">
     <div class="close-btn" onclick="togglePopup3()">×</div>
-    <h1>YOUR ORDER</h1>
-	<p></p>
-				 <img src="3.png" 
-			       width="200" 
-				   height="200" />
-				   </a>
-	  <p>AERIAL ASSAULT OG FULL ACCESS ACCOUNT</p>
-	  <p>Additional skins: 90-100</p>
-	  
-	  <h4><sup class="description">$</sup>13,99<span></span></h4>
-	<input type="text" placeholder="Delivery E-mail adress"> </>
-	                
-                <a href="https://www.paypal.com/donate/?hosted_button_id=CCAU2XABWNUJY" class="cta-btn">Pay With Paypal/Credit Card</a>
-           
-  </div>
-</div>
-			<div class="popup" id="popup-4">
-  <div class="overlay"></div>
-  <div class="content">
-    <div class="close-btn" onclick="togglePopup4()">×</div>
-    <h1>YOUR ORDER</h1>
-	<p></p>
-				 <img src="4.png" 
-			       width="200" 
-				   height="200" />
-				   </a>
-	  <p>BLAZE OG FULL ACCESS ACCOUNT</p>
-	  <p>Additional skins: 90-100</p>
-	  
-	  <h4><sup class="description">$</sup>13,99<span></span></h4>
-	<input type="text" placeholder="Delivery E-mail adress"> </>
-	                
-                <a href="https://www.paypal.com/donate/?hosted_button_id=E7XDV83LFV2PC" class="cta-btn">Pay With Paypal/Credit Card</a>
-           
-  </div>
-</div>
-			<div class="popup" id="popup-5">
-  <div class="overlay"></div>
-  <div class="content">
-    <div class="close-btn" onclick="togglePopup5()">×</div>
-    <h1>YOUR ORDER</h1>
-	<p></p>
-				 <img src="5.png" 
-			       width="200" 
-				   height="200" />
-				   </a>
-	  <p>GALAXY OG FULL ACCESS ACCOUNT</p>
-	  <p>Additional skins: 120-130</p>
-	  
-	  <h4><sup class="description">$</sup>13,99<span></span></h4>
-	<input type="text" placeholder="Delivery E-mail adress"> </>
-	                
-                <a href="https://www.paypal.com/donate/?hosted_button_id=XP646ESKXLW9Y" class="cta-btn">Pay With Paypal/Credit Card</a>
-           
-  </div>
-</div>
-			<div class="popup" id="popup-6">
-  <div class="overlay"></div>
-  <div class="content">
-    <div class="close-btn" onclick="togglePopup6()">×</div>
-    <h1>YOUR ORDER</h1>
-	<p></p>
-				 <img src="6.png" 
-			       width="200" 
-				   height="200" />
-				   </a>
-	  <p>RECON EXPERT OG FULL ACCESS ACCOUNT</p>
-	  <p>Additional skins: 110-115</p>
-	  
-	  <h4><sup class="description">$</sup>13,99<span></span></h4>
-	<input type="text" placeholder="Delivery E-mail adress"> </>
-	                
-                <a href="https://www.paypal.com/donate/?hosted_button_id=JT4PZ5B8E59YW" class="cta-btn">Pay With Paypal/Credit Card</a>
-           
-  </div>
-</div>
-		<div class="popup" id="popup-7">
-  <div class="overlay"></div>
-  <div class="content">
-    <div class="close-btn" onclick="togglePopup7()">×</div>
     <h1>YOUR ORDER</h1>
 	<p></p>
 				 <img src="7.png" 
 			       width="200" 
 				   height="200" />
 				   </a>
-	  <p>SKULL TROOPER OG FULL ACCESS ACCOUNT</p>
-	  <p>Additional skins: 100-110</p>
-	  
+	  <p>OG SKULL TROOPER</p>
+	  <p>Additional Skins: 110-115</p>
+	 
+		
 	  <h4><sup class="description">$</sup>13,99<span></span></h4>
-	<input type="text" placeholder="Delivery E-mail adress"> </>
-	                
-                <a href="https://www.paypal.com/donate/?hosted_button_id=KMS22BDBFFA58" class="cta-btn">Pay With Paypal/Credit Card</a>
-           
+	<input type="text" style="color: grey; background-color: 131212;border: 3px solid #000000;" placeholder="Delivery E-mail adress"> </>
+		<p></p>
+	<p></p>
+<a class="cta-btn"  href="https://www.paypal.com/donate?hosted_button_id=6HZLZK667LNP6">BUY NOW!</a>
+
   </div>
 </div>
-	<div class="popup" id="popup-8">
+<div class="popup" id="popup-4">
+  <div class="overlay"></div>
+  <div class="content">
+    <div class="close-btn" onclick="togglePopup4()">×</div>
+    <h1>YOUR ORDER</h1>
+	<p></p>
+				 <img src="3.png" 
+			       width="200" 
+				   height="200" />
+				   </a>
+	  <p>GHOUL TROOPER</p>
+	  <p>Additional Skins: 95-100</p>
+	 
+		
+	  <h4><sup class="description">$</sup>13,99<span></span></h4>
+	<input type="text" style="color: grey; background-color: 131212;border: 3px solid #000000;" placeholder="Delivery E-mail adress"> </>
+		<p></p>
+	<p></p>
+<a class="cta-btn"  href="https://www.paypal.com/donate?hosted_button_id=LC3CWLLWT76NL">BUY NOW!</a>
+
+  </div>
+</div>
+<div class="popup" id="popup-5">
+  <div class="overlay"></div>
+  <div class="content">
+    <div class="close-btn" onclick="togglePopup5()">×</div>
+    <h1>YOUR ORDER</h1>
+	<p></p>
+				 <img src="4.png" 
+			       width="200" 
+				   height="200" />
+				   </a>
+	  <p>AERIAL ASSAULT</p>
+	  <p>Additional Skins: 95-100</p>
+	 
+		
+	  <h4><sup class="description">$</sup>13,99<span></span></h4>
+	<input type="text" style="color: grey; background-color: 131212;border: 3px solid #000000;" placeholder="Delivery E-mail adress"> </>
+		<p></p>
+	<p></p>
+<a class="cta-btn"  href="https://www.paypal.com/donate?hosted_button_id=B55A4CDZQEULC">BUY NOW!</a>
+
+  </div>
+</div>
+<div class="popup" id="popup-6">
+  <div class="overlay"></div>
+  <div class="content">
+    <div class="close-btn" onclick="togglePopup6()">×</div>
+    <h1>YOUR ORDER</h1>
+	<p></p>
+				 <img src="5.png" 
+			       width="200" 
+				   height="200" />
+				   </a>
+	  <p>IKONIK</p>
+	  <p>Additional Skins: 125-130</p>
+	 
+		
+	  <h4><sup class="description">$</sup>13,99<span></span></h4>
+	<input type="text" style="color: grey; background-color: 131212;border: 3px solid #000000;" placeholder="Delivery E-mail adress"> </>
+		<p></p>
+	<p></p>
+<a class="cta-btn"  href="https://www.paypal.com/donate?hosted_button_id=JW5VPDVYTNTZW">BUY NOW!</a>
+
+  </div>
+</div>
+<div class="popup" id="popup-7">
+  <div class="overlay"></div>
+  <div class="content">
+    <div class="close-btn" onclick="togglePopup7()">×</div>
+    <h1>YOUR ORDER</h1>
+	<p></p>
+				 <img src="6.png" 
+			       width="200" 
+				   height="200" />
+				   </a>
+	  <p>GALAXY</p>
+	  <p>Additional Skins: 100-110</p>
+	 
+		
+	  <h4><sup class="description">$</sup>13,99<span></span></h4>
+	<input type="text" style="color: grey; background-color: 131212;border: 3px solid #000000;" placeholder="Delivery E-mail adress"> </>
+		<p></p>
+	<p></p>
+<a class="cta-btn"  href="https://www.paypal.com/donate?hosted_button_id=DZWNXND67EP2G">BUY NOW!</a>
+
+  </div>
+</div>
+<div class="popup" id="popup-8">
   <div class="overlay"></div>
   <div class="content">
     <div class="close-btn" onclick="togglePopup8()">×</div>
@@ -351,14 +393,16 @@ window.onload = function () {
 			       width="200" 
 				   height="200" />
 				   </a>
-	  <p>WILDCAT OG FULL ACCESS ACCOUNT</p>
-	  <p>Additional skins: 110-120</p>
-	  
-	  <h4><sup class="description">$</sup>13,99<span></span></h4>
-	<input type="text" placeholder="Delivery E-mail adress"> </>
-	                
-                <a href="https://www.paypal.com/donate/?hosted_button_id=U3CVHNLQK9P9Y" class="cta-btn">Pay With Paypal/Credit Card</a>
-           
+	  <p>DIRE</p>
+	  <p>Additional Skins: 95-100</p>
+	 
+		
+	  <h4><sup class="description">$</sup>11,99<span></span></h4>
+	<input type="text" style="color: grey; background-color: 131212;border: 3px solid #000000;" placeholder="Delivery E-mail adress"> </>
+		<p></p>
+	<p></p>
+<a class="cta-btn"  href="https://www.paypal.com/donate?hosted_button_id=ZREUM3E9Y78TY">BUY NOW!</a>
+
   </div>
 </div>
 <div class="popup" id="popup-9">
@@ -371,14 +415,16 @@ window.onload = function () {
 			       width="200" 
 				   height="200" />
 				   </a>
-	  <p>GHOUL TROOPER OG FULL ACCESS ACCOUNT</p>
-	  <p>Additional skins: 110-120</p>
-	  
-	  <h4><sup class="description">$</sup>13,99<span></span></h4>
-	<input type="text" placeholder="Delivery E-mail adress"> </>
-	                
-                <a href="https://www.paypal.com/donate/?hosted_button_id=GPZ7VXCLSR3ZC" class="cta-btn">Pay With Paypal/Credit Card</a>
-           
+	  <p>CATALYST</p>
+	  <p>Additional Skins: 120-125</p>
+	 
+		
+	  <h4><sup class="description">$</sup>11,99<span></span></h4>
+	<input type="text" style="color: grey; background-color: 131212;border: 3px solid #000000;" placeholder="Delivery E-mail adress"> </>
+		<p></p>
+	<p></p>
+<a class="cta-btn"  href="https://www.paypal.com/donate?hosted_button_id=34XPQRN668GH6">BUY NOW!</a>
+
   </div>
 </div>
 <div class="popup" id="popup-10">
@@ -391,19 +437,21 @@ window.onload = function () {
 			       width="200" 
 				   height="200" />
 				   </a>
-	  <p>IKONIK OG FULL ACCESS ACCOUNT</p>
-	  <p>Additional skins: 130-135</p>
-	  
-	  <h4><sup class="description">$</sup>13,99<span></span></h4>
-	<input type="text" placeholder="Delivery E-mail adress"> </>
-	                
-                <a href="https://www.paypal.com/donate/?hosted_button_id=ZQDWLVRFXVBB8" class="cta-btn">Pay With Paypal/Credit Card</a>
-           
+	  <p>CHOMP SR.</p>
+	  <p>Additional Skins: 95-100</p>
+	 
+		
+	  <h4><sup class="description">$</sup>9,99<span></span></h4>
+	<input type="text" style="color: grey; background-color: 131212;border: 3px solid #000000;" placeholder="Delivery E-mail adress"> </>
+		<p></p>
+	<p></p>
+<a class="cta-btn"  href="https://www.paypal.com/donate?hosted_button_id=M6FVWAL8H4NLQ">BUY NOW!</a>
+
   </div>
 </div>
 <div class="popup" id="popup-11">
   <div class="overlay"></div>
-  <div class="content">
+  <div class="content" style="height:1000px;">
     <div class="close-btn" onclick="togglePopup11()">×</div>
     <h1>YOUR ORDER</h1>
 	<p></p>
@@ -411,14 +459,44 @@ window.onload = function () {
 			       width="200" 
 				   height="200" />
 				   </a>
-	  <p>ROYAL BOMBER OG FULL ACCESS ACCOUNT</p>
-	  <p>Additional skins: 85-90</p>
-	  
-	  <h4><sup class="description">$</sup>13,99<span></span></h4>
-	<input type="text" placeholder="Delivery E-mail adress"> </>
-	                
-                <a href="https://www.paypal.com/donate/?hosted_button_id=T2MBKUHTFTVZW" class="cta-btn">Pay With Paypal/Credit Card</a>
-           
+	  <p>WILDCAT BUNDLE Nintendo Switch</p>
+	  <p>Additional: 2000V-BUCKS</p>
+	
+	<p><b style="color: red;">instruction:</b></p>
+	<p><b>1.</b>Open the Epic Games Launcher.</p>
+		<p><b>2.</b>Log in to your Epic Games account.</p>
+			<p><b>3.</b>Click your name in the bottom left corner.</p>
+				<p><b>4.</b>Click Redeem Code.</p>
+					<p><b>5.</b>Enter the code, and then click Redeem. Note: You should receive a message that the code was successfully redeemed.</p>
+	 
+		
+	  <h4><sup class="description">$</sup>99,99<span></span></h4>
+	<input type="text" style="color: grey; background-color: 131212;border: 3px solid #000000;" placeholder="Delivery E-mail adress"> </>
+		<p></p>
+	<p></p>
+<a class="cta-btn"  href="https://www.paypal.com/donate?hosted_button_id=S3F55UYTNMYJS">BUY NOW!</a>
+
+  </div>
+</div>
+<div class="popup" id="popup-40">
+  <div class="overlay"></div>
+  <div  class="content" style="height:780px;">
+    <div class="close-btn" onclick="togglePopup40()">×</div>
+    <h1>Terms Of Service</h1>
+	<p></p>
+		
+	  <p><b>1.REFUND</b></p>
+	  <p>If you want a refund, you can get a refund for 72 hours, after that time we do not refund.</p>
+	  	  <p><b>2.Ignore T.O.S.</b></p>
+	  <p>Ignorance of T.O.S does not exempt from obeying it!.</p>
+	  	  	  <p><b>3.Order's</b></p>
+	  <p>Every customer is obliged to provide the correct EMAIL address before purchasing! If you have made a mistake in the form, write to us immediately (bottom left corner on the main page).</p>
+	 	  	  <p><b>4.Conversation with support</b></p>
+	  <p>Please do not spam on the support chat, in the event that this happens, we will not help you.</p>
+	  	 	  	  <p><b>5.Problem with the order</b></p>
+	  <p>If your account has not arrived or you have any other problem with your account, please contact us and we will help you.</p>
+	
+
   </div>
 </div>
 <div class="popup" id="popup-12">
@@ -431,779 +509,615 @@ window.onload = function () {
 			       width="200" 
 				   height="200" />
 				   </a>
-	  <p>RIPPLEY OG FULL ACCESS ACCOUNT</p>
-	  <p>Additional skins: 90-95</p>
-	  
-	  <h4><sup class="description">$</sup>13,99<span></span></h4>
-	<input type="text" placeholder="Delivery E-mail adress"> </>
-	                
-                <a href="https://www.paypal.com/donate/?hosted_button_id=URGTYNHMJS7UJ" class="cta-btn">Pay With Paypal/Credit Card</a>
-           
-  </div>
-</div>
-<div class="popup" id="popup-13">
-  <div class="overlay"></div>
-  <div class="content">
-    <div class="close-btn" onclick="togglePopup13()">×</div>
-    <h1>YOUR ORDER</h1>
+	  <p>PSYCHO Bundle Borderlands 3</p>
+	  <p>Additional: Psycho Buzz Axes, Claptrap Pet</p>
+	 
+		
+	  <h4><sup class="description">$</sup>19,99<span></span></h4>
+	<input type="text" style="color: grey; background-color: 131212;border: 3px solid #000000;" placeholder="Delivery E-mail adress"> </>
+		<p></p>
 	<p></p>
-				 <img src="1.png" 
-			       width="200" 
-				   height="200" />
-				   </a>
-	  <p>BLACK KNIGHT FULL ACCESS ACCOUNT</p>
-	  <p>Additional skins: 15-20</p>
-	  
-	  <h4><sup class="description">$</sup>7,99<span></span></h4>
-	<input type="text" placeholder="Delivery E-mail adress"> </>
-	                
-                <a href="https://www.paypal.com/donate/?hosted_button_id=8LK68TNSJBBBC" class="cta-btn">Pay With Paypal/Credit Card</a>
-           
+<a class="cta-btn"  href="https://www.paypal.com/donate?hosted_button_id=L2KK3ZQP9T6QL">BUY NOW!</a>
+
   </div>
 </div>
-<div class="popup" id="popup-14">
-  <div class="overlay"></div>
-  <div class="content">
-    <div class="close-btn" onclick="togglePopup14()">×</div>
-    <h1>YOUR ORDER</h1>
-	<p></p>
-				 <img src="2.png" 
-			       width="200" 
-				   height="200" />
-				   </a>
-	  <p>RENEGADE RAIDER FULL ACCESS ACCOUNT</p>
-	  <p>Additional skins: 5-15</p>
-	  
-	  <h4><sup class="description">$</sup>7,99<span></span></h4>
-	<input type="text" placeholder="Delivery E-mail adress"> </>
-	                
-                <a href="https://www.paypal.com/donate/?hosted_button_id=EZ2N5HUQEB8GQ" class="cta-btn">Pay With Paypal/Credit Card</a>
-           
-  </div>
-</div>
-<div class="popup" id="popup-15">
-  <div class="overlay"></div>
-  <div class="content">
-    <div class="close-btn" onclick="togglePopup15()">×</div>
-    <h1>YOUR ORDER</h1>
-	<p></p>
-				 <img src="3.png" 
-			       width="200" 
-				   height="200" />
-				   </a>
-	  <p>AERIAL ASSAULT FULL ACCESS ACCOUNT</p>
-	  <p>Additional skins: 10-20</p>
-	  
-	  <h4><sup class="description">$</sup>7,99<span></span></h4>
-	<input type="text" placeholder="Delivery E-mail adress"> </>
-	                
-                <a href="https://www.paypal.com/donate/?hosted_button_id=X2V4W5N9GV35L" class="cta-btn">Pay With Paypal/Credit Card</a>
-           
-  </div>
-</div>
-<div class="popup" id="popup-16">
-  <div class="overlay"></div>
-  <div class="content">
-    <div class="close-btn" onclick="togglePopup16()">×</div>
-    <h1>YOUR ORDER</h1>
-	<p></p>
-				 <img src="5.png" 
-			       width="200" 
-				   height="200" />
-				   </a>
-	  <p>GALAXY FULL ACCESS ACCOUNT</p>
-	  <p>Additional skins: 21</p>
-	  
-	  <h4><sup class="description">$</sup>7,99<span></span></h4>
-	<input type="text" placeholder="Delivery E-mail adress"> </>
-	                
-                <a href="https://www.paypal.com/donate/?hosted_button_id=RET29TH2QSBAU" class="cta-btn">Pay With Paypal/Credit Card</a>
-           
-  </div>
-</div>
-<div class="popup" id="popup-17">
-  <div class="overlay"></div>
-  <div class="content">
-    <div class="close-btn" onclick="togglePopup17()">×</div>
-    <h1>YOUR ORDER</h1>
-	<p></p>
-				 <img src="6.png" 
-			       width="200" 
-				   height="200" />
-				   </a>
-	  <p>RECON EXPERT FULL ACCESS ACCOUNT</p>
-	  <p>Additional skins: 10-15</p>
-	  
-	  <h4><sup class="description">$</sup>7,99<span></span></h4>
-	<input type="text" placeholder="Delivery E-mail adress"> </>
-	                
-                <a href="https://www.paypal.com/donate/?hosted_button_id=CVEG5K4EQ22Y8" class="cta-btn">Pay With Paypal/Credit Card</a>
-           
-  </div>
-</div>
-<div class="popup" id="popup-18">
-  <div class="overlay"></div>
-  <div class="content">
-    <div class="close-btn" onclick="togglePopup18()">×</div>
-    <h1>YOUR ORDER</h1>
-	<p></p>
-				 <img src="7.png" 
-			       width="200" 
-				   height="200" />
-				   </a>
-	  <p>SKULL TROOPER FULL ACCESS ACCOUNT</p>
-	  <p>Additional skins: 5-10</p>
-	  
-	  <h4><sup class="description">$</sup>7,99<span></span></h4>
-	<input type="text" placeholder="Delivery E-mail adress"> </>
-	                
-                <a href="https://www.paypal.com/donate/?hosted_button_id=MG5PNLXFG46R6" class="cta-btn">Pay With Paypal/Credit Card</a>
-           
-  </div>
-</div>
-<div class="popup" id="popup-19">
-  <div class="overlay"></div>
-  <div class="content">
-    <div class="close-btn" onclick="togglePopup19()">×</div>
-    <h1>YOUR ORDER</h1>
-	<p></p>
-				 <img src="9.png" 
-			       width="200" 
-				   height="200" />
-				   </a>
-	  <p>GHOUL TROOPER FULL ACCESS ACCOUNT</p>
-	  <p>Additional skins: 5-10</p>
-	  
-	  <h4><sup class="description">$</sup>7,99<span></span></h4>
-	<input type="text" placeholder="Delivery E-mail adress"> </>
-	                
-                <a href="https://www.paypal.com/donate?hosted_button_id=XQPM8UQW2GAVU" class="cta-btn">Pay With Paypal/Credit Card</a>
-           
-  </div>
-</div>
-<div class="popup" id="popup-20">
-  <div class="overlay"></div>
-  <div class="content">
-    <div class="close-btn" onclick="togglePopup20()">×</div>
-    <h1>YOUR ORDER</h1>
-	<p></p>
-				 <img src="12.png" 
-			       width="200" 
-				   height="200" />
-				   </a>
-	  <p>RIPPLEY FULL ACCESS ACCOUNT</p>
-	  <p>Additional skins: 6</p>
-	  
-	  <h4><sup class="description">$</sup>7,99<span></span></h4>
-	<input type="text" placeholder="Delivery E-mail adress"> </>
-	                
-                <a href="https://www.paypal.com/donate?hosted_button_id=N68YXWHX4WGVG" class="cta-btn">Pay With Paypal/Credit Card</a>
-           
-  </div>
-</div>
-<div class="popup" id="popup-21">
-  <div class="overlay"></div>
-  <div class="content">
-    <div class="close-btn" onclick="togglePopup21()">×</div>
-    <h1>YOUR ORDER</h1>
-	<p></p>
-				 <img src="promo.png" 
-			       width="200" 
-				   height="200" />
-				   </a>
-	  <p>WILDCAT Bundle + 2000 V-Bucks Nintendo Switch</p>
-	  <p>CODE FORMAT : XXXX-XXXX-XXXX-XXXX</p>
-	  
-	  <h4><sup class="description">$</sup>24,99<span></span></h4>
-	<input type="text" placeholder="Delivery E-mail adress"> </>
-	                
-                <a href="https://www.paypal.com/donate/?hosted_button_id=6WKASSW6TFUJ6" class="cta-btn">Pay With Paypal/Credit Card</a>
-           
-  </div>
-</div>
- <section id="services3" class="services">
+    <!-- ======= About Section ======= -->
+    <section id="about">
       <div class="container" data-aos="fade-up">
 
-        <div class="section-title">
-          <h2>SHOP</h2>
-          <p>PREMIUM</p>
-        </div>
-	      
-	       <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box">
-              	<img src="promo.png" 
-			       width="200" 
-				   height="200" />
-				   <p></p>
-              <h4><a href="#">WILDCAT Bundle + 2000 V-Bucks Nintendo Switch</a></h4>
-              <p>🚀 Additional: 2000V-Bucks</p>
-			  <p></p>
-		    <p>🚀 Access: Full access</p>
-			  <p></p>
-			  
-			  <p>🚀 Platform: Nintendo Switch</p>
-			  <p></p>
-			  
-			
-			  <h4>24,99$</h4>
-			          <div class="text-center">
-				<a class="cta-btn" onclick="togglePopup21()" href="#">BUY NOW!</a>
-				</div>
-            </div>
-          </div>
-	      
-	      </div>   
-	      
-	 </div>
-	      </section>
-    <section id="services" class="services">
-      <div class="container" data-aos="fade-up">
+        <header class="section-header">
+          <h3>About Us</h3>
+          <p>Learn more about FortniteShopping.com</p>
+        </header>
 
-        <div class="section-title">
-          <h2>SHOP</h2>
-          <p>OG FULL ACCESS ACCOUNTS</p>
-        </div>
+        <div class="row about-container">
 
-        <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box">
-              	<img src="1.png" 
-			       width="200" 
-				   height="200" />
-				   <p></p>
-              <h4><a href="#">BLACK KNIGHT</a></h4>
-              <p>🚀 Additional skins: 120-130</p>
-			  <p></p>
-		
-			  <p>🚀 Access: Full access</p>
-			  <p></p>
-			  
-			  <p>🚀 Platform: XBOX, PC, PlayStation</p>
-			  <p></p>
-			  
-			  <p>🚀 E-Mail Types: Gmail, Yahoo, iCloud</p>
-			  <p></p>
-			
-			  <h4>13,99$</h4>
-			          <div class="text-center">
-				<a class="cta-btn" onclick="togglePopup()" href="#">BUY NOW!</a>
-				</div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box">
-                            	<img src="2.png" 
-			       width="200" 
-				   height="200" />
-				   <p></p>
-              <h4><a href="#">RENEGADE RAIDER</a></h4>
-              <p>🚀 Additional skins: 100-115</p>
-			  <p></p>
-		
-			  <p>🚀 Access: Full access</p>
-			  <p></p>
-			  
-			  <p>🚀 Platform: XBOX, PC, PlayStation</p>
-			  <p></p>
-			  
-			  <p>🚀 E-Mail Types: Gmail, Yahoo, iCloud</p>
-			  <p></p>
-			
-			  <h4>13,99$</h4>
-			          <div class="text-center">
-				<a class="cta-btn" onclick="togglePopup2()" href="#">BUY NOW!</a>
-				</div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box">
-                                         	<img src="3.png" 
-			       width="200" 
-				   height="200" />
-				   <p></p>
-              <h4><a href="#">AERIAL ASSAULT</a></h4>
-              <p>🚀 Additional skins: 90-100</p>
-			  <p></p>
-		
-			  <p>🚀 Access: Full access</p>
-			  <p></p>
-			  
-			  <p>🚀 Platform: XBOX, PC, PlayStation</p>
-			  <p></p>
-			  
-			  <p>🚀 E-Mail Types: Gmail, Yahoo, iCloud</p>
-			  <p></p>
-			
-			  <h4>13,99$</h4>
-			          <div class="text-center">
-				<a class="cta-btn" onclick="togglePopup3()" href="#">BUY NOW!</a>
-				</div>
-            </div>
-          </div>
-
-         
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box">
-                               	<img src="5.png" 
-			       width="200" 
-				   height="200" />
-				   <p></p>
-              <h4><a href="#">GALAXY</a></h4>
-              <p>🚀 Additional skins: 120-130</p>
-			  <p></p>
-		
-			  <p>🚀 Access: Full access</p>
-			  <p></p>
-			  
-			  <p>🚀 Platform: XBOX, PC, PlayStation</p>
-			  <p></p>
-			  
-			  <p>🚀 E-Mail Types: Gmail, Yahoo, iCloud</p>
-			  <p></p>
-			
-			  <h4>13,99$</h4>
-			          <div class="text-center">
-				<a class="cta-btn" onclick="togglePopup5()" href="#">BUY NOW!</a>
-				</div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box">
-                           	<img src="6.png" 
-			       width="200" 
-				   height="200" />
-				   <p></p>
-              <h4><a href="#">RECON EXPERT</a></h4>
-              <p>🚀 Additional skins: 110-115</p>
-			  <p></p>
-		
-			  <p>🚀 Access: Full access</p>
-			  <p></p>
-			  
-			  <p>🚀 Platform: XBOX, PC, PlayStation</p>
-			  <p></p>
-			  
-			  <p>🚀 E-Mail Types: Gmail, Yahoo, iCloud</p>
-			  <p></p>
-			
-			  <h4>13,99$</h4>
-			          <div class="text-center">
-				<a class="cta-btn" onclick="togglePopup6()" href="#">BUY NOW!</a>
-				</div>
-            </div>
-          </div>
-			<div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box">
-                           	<img src="7.png" 
-			       width="200" 
-				   height="200" />
-				   <p></p>
-              <h4><a href="#">SKULL TROOPER</a></h4>
-              <p>🚀 Additional skins: 100-110</p>
-			  <p></p>
-		
-			  <p>🚀 Access: Full access</p>
-			  <p></p>
-			  
-			  <p>🚀 Platform: XBOX, PC, PlayStation</p>
-			  <p></p>
-			  
-			  <p>🚀 E-Mail Types: Gmail, Yahoo, iCloud</p>
-			  <p></p>
-			
-			  <h4>13,99$</h4>
-			          <div class="text-center">
-				<a class="cta-btn" onclick="togglePopup7()" href="#">BUY NOW!</a>
-				</div>
-            </div>
-          </div>
-		  
-		  <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box">
-                           	<img src="8.png" 
-			       width="200" 
-				   height="200" />
-				   <p></p>
-              <h4><a href="#">WILDCAT</a></h4>
-              <p>🚀 Additional skins: 110-120</p>
-			  <p></p>
-		
-			  <p>🚀 Access: Full access</p>
-			  <p></p>
-			  
-			  <p>🚀 Platform: XBOX, PC, PlayStation</p>
-			  <p></p>
-			  
-			  <p>🚀 E-Mail Types: Gmail, Yahoo, iCloud</p>
-			  <p></p>
-			
-			  <h4>13,99$</h4>
-			          <div class="text-center">
-				<a class="cta-btn" onclick="togglePopup8()" href="#">BUY NOW!</a>
-				</div>
-            </div>
-          </div>
-		  <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box">
-                           	<img src="9.png" 
-			       width="200" 
-				   height="200" />
-				   <p></p>
-              <h4><a href="#">GHOUL TROOPER</a></h4>
-              <p>🚀 Additional skins: 110-120</p>
-			  <p></p>
-		
-			  <p>🚀 Access: Full access</p>
-			  <p></p>
-			  
-			  <p>🚀 Platform: XBOX, PC, PlayStation</p>
-			  <p></p>
-			  
-			  <p>🚀 E-Mail Types: Gmail, Yahoo, iCloud</p>
-			  <p></p>
-			
-			  <h4>13,99$</h4>
-			          <div class="text-center">
-				<a class="cta-btn" onclick="togglePopup9()" href="#">BUY NOW!</a>
-				</div>
-            </div>
-          </div>
-		  		  <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box">
-                           	<img src="10.png" 
-			       width="200" 
-				   height="200" />
-				   <p></p>
-              <h4><a href="#">IKONIK</a></h4>
-              <p>🚀 Additional skins: 130-135</p>
-			  <p></p>
-		
-			  <p>🚀 Access: Full access</p>
-			  <p></p>
-			  
-			  <p>🚀 Platform: XBOX, PC, PlayStation</p>
-			  <p></p>
-			  
-			  <p>🚀 E-Mail Types: Gmail, Yahoo, iCloud</p>
-			  <p></p>
-			
-			  <h4>13,99$</h4>
-			          <div class="text-center">
-				<a class="cta-btn" onclick="togglePopup10()" href="#">BUY NOW!</a>
-				</div>
-            </div>
-          </div>
-		  	  		  <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box">
-                           	<img src="11.png" 
-			       width="200" 
-				   height="200" />
-				   <p></p>
-              <h4><a href="#">ROYAL BOMBER</a></h4>
-              <p>🚀 Additional skins: 85-90</p>
-			  <p></p>
-		
-			  <p>🚀 Access: Full access</p>
-			  <p></p>
-			  
-			  <p>🚀 Platform: XBOX, PC, PlayStation</p>
-			  <p></p>
-			  
-			  <p>🚀 E-Mail Types: Gmail, Yahoo, iCloud</p>
-			  <p></p>
-			
-			  <h4>13,99$</h4>
-			          <div class="text-center">
-				<a class="cta-btn" onclick="togglePopup11()" href="#">BUY NOW!</a>
-				</div>
-            </div>
-          </div>
-		  
-		  
-		  
-        </div>
-
-      </div>
-    </section>
-<section id="services2" class="services">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>SHOP</h2>
-          <p>FULL ACCESS ACCOUNTS</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box">
-              	<img src="1.png" 
-			       width="200" 
-				   height="200" />
-				   <p></p>
-              <h4><a href="#">BLACK KNIGHT</a></h4>
-              <p>🚀 Additional skins: 15-20</p>
-			  <p></p>
-		
-			  <p>🚀 Access: Full access</p>
-			  <p></p>
-			  
-			  <p>🚀 Platform: XBOX, PC, PlayStation</p>
-			  <p></p>
-			  
-			  <p>🚀 E-Mail Types: Gmail, Yahoo, iCloud</p>
-			  <p></p>
-			
-			  <h4>7,99$</h4>
-			          <div class="text-center">
-				<a class="cta-btn" onclick="togglePopup13()" href="#">BUY NOW!</a>
-				</div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box">
-                            	<img src="2.png" 
-			       width="200" 
-				   height="200" />
-				   <p></p>
-              <h4><a href="#">RENEGADE RAIDER</a></h4>
-              <p>🚀 Additional skins: 5-15</p>
-			  <p></p>
-		
-			  <p>🚀 Access: Full access</p>
-			  <p></p>
-			  
-			  <p>🚀 Platform: XBOX, PC, PlayStation</p>
-			  <p></p>
-			  
-			  <p>🚀 E-Mail Types: Gmail, Yahoo, iCloud</p>
-			  <p></p>
-			
-			  <h4>7,99$</h4>
-			          <div class="text-center">
-				<a class="cta-btn" onclick="togglePopup14()" href="#">BUY NOW!</a>
-				</div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box">
-                                         	<img src="3.png" 
-			       width="200" 
-				   height="200" />
-				   <p></p>
-              <h4><a href="#">AERIAL ASSAULT</a></h4>
-              <p>🚀 Additional skins: 10-20</p>
-			  <p></p>
-		
-			  <p>🚀 Access: Full access</p>
-			  <p></p>
-			  
-			  <p>🚀 Platform: XBOX, PC, PlayStation</p>
-			  <p></p>
-			  
-			  <p>🚀 E-Mail Types: Gmail, Yahoo, iCloud</p>
-			  <p></p>
-			
-			  <h4>7,99$</h4>
-			          <div class="text-center">
-				<a class="cta-btn" onclick="togglePopup15()" href="#">BUY NOW!</a>
-				</div>
-            </div>
-          </div>
-
-     
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box">
-                               	<img src="5.png" 
-			       width="200" 
-				   height="200" />
-				   <p></p>
-              <h4><a href="#">GALAXY</a></h4>
-              <p>🚀 Additional skins: 21</p>
-			  <p></p>
-		
-			  <p>🚀 Access: Full access</p>
-			  <p></p>
-			  
-			  <p>🚀 Platform: XBOX, PC, PlayStation</p>
-			  <p></p>
-			  
-			  <p>🚀 E-Mail Types: Gmail, Yahoo, iCloud</p>
-			  <p></p>
-			
-			  <h4>7,99$</h4>
-			          <div class="text-center">
-				<a class="cta-btn" onclick="togglePopup16()" href="#">BUY NOW!</a>
-				</div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box">
-                           	<img src="6.png" 
-			       width="200" 
-				   height="200" />
-				   <p></p>
-              <h4><a href="#">RECON EXPERT</a></h4>
-              <p>🚀 Additional skins: 10-15</p>
-			  <p></p>
-		
-			  <p>🚀 Access: Full access</p>
-			  <p></p>
-			  
-			  <p>🚀 Platform: XBOX, PC, PlayStation</p>
-			  <p></p>
-			  
-			  <p>🚀 E-Mail Types: Gmail, Yahoo, iCloud</p>
-			  <p></p>
-			
-			  <h4>7,99$</h4>
-			          <div class="text-center">
-				<a class="cta-btn" onclick="togglePopup17()" href="#">BUY NOW!</a>
-				</div>
-            </div>
-          </div>
-			<div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box">
-                           	<img src="7.png" 
-			       width="200" 
-				   height="200" />
-				   <p></p>
-              <h4><a href="#">SKULL TROOPER</a></h4>
-              <p>🚀 Additional skins: 5-10</p>
-			  <p></p>
-		
-			  <p>🚀 Access: Full access</p>
-			  <p></p>
-			  
-			  <p>🚀 Platform: XBOX, PC, PlayStation</p>
-			  <p></p>
-			  
-			  <p>🚀 E-Mail Types: Gmail, Yahoo, iCloud</p>
-			  <p></p>
-			
-			  <h4>7,99$</h4>
-			          <div class="text-center">
-				<a class="cta-btn" onclick="togglePopup18()" href="#">BUY NOW!</a>
-				</div>
-            </div>
-          </div>
-		  
-
-
-		  
+          <div class="col-lg-6 content order-lg-1 order-2">
+            <p>
+              We have been operating on the market for over 3 years. we have a lot of satisfied customers. and very low prices compared to the quality
+            </p>
 	
-		  
-		  
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon"><i class="bi bi-card-checklist"></i></div>
+              <h4 class="title"><a href="">LARGE SELECTION OF</a></h4>
+              <p class="description">in our store there is a lot of accounts, it's hard to decide!</p>
+            </div>
+
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon"><i class="bi bi-brightness-high"></i></div>
+              <h4 class="title"><a href="">INSTANT DELIVERY</a></h4>
+              <p class="description">We offer immediate shipment to your email address. it usually takes one minute!</p>
+            </div>
+
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon"><i class="bi bi-calendar4-week"></i></div>
+              <h4 class="title"><a href="">HELPFUL SUPPORT</a></h4>
+              <p class="description">our support is online practically all the time, friendly and willing to help!</p>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6 background order-lg-2" data-aos="zoom-in">
+            <img src="assets/img/about-img.svg" class="img-fluid" alt="">
+          </div>
+        </div>
+
+
+
+       
+
         </div>
 
       </div>
-    </section>
+    </section><!-- End About Section -->
 
-   
-    <section id="testimonials" class="testimonials">
-      <div class="container" data-aos="zoom-in">
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us">
+      <div class="container" data-aos="fade-up">
+        <header class="section-header">
+          <h3 style="color: black;">OG FULL ACCESS ACCOUNTS </h3>
+          <p style="color: black;">check our offer! we offer instant shipping for this service.</p>
+        </header>
 
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
+        <div class="row row-eq-height justify-content-center">
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/profile.png" class="testimonial-img" alt="">
-                <h3>Verified Customer</h3>
-              
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                 All work, recommend!
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/profile.png" class="testimonial-img" alt="">
-                <h3>Verified Customer</h3>
-                
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              account working
-			  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/profile.png" class="testimonial-img" alt="">
-                <h3>Verified Customer</h3>
-             
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                I was scared because the prices are suspicious, but the account arrived so its legit!
-				<i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/profile.png" class="testimonial-img" alt="">
-                <h3>Verified Customer</h3>
-               
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-               Legit Shop
-			   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/profile.png" class="testimonial-img" alt="">
-                <h3>Verified Customer</h3>
-               
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                 I received my account 6 minutes after the purchase, I'm satisfied
-				 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
+          <div class="col-lg-4 mb-4">
+            <div class="card" data-aos="zoom-in" data-aos-delay="100">
+        
+              <div class="card-body">
+			  					 <img src="1.png" 
+			       width="200" 
+				   height="200" />
+				   </a>
+                <h5 class="card-title" style="color: black;">RENEGADE RAIDER</h5>
+                <p class="card-text" style="color: black;"><b >Additional Skins:</b> 110-115</p>
+		    <p class="card-text" style="color: black;"><b >E-Mail Types:</b> Gmail, Yahoo, iCloud</p>
+		    <p class="card-text" style="color: black;"><b >Platforms:</b>ALL (PC, PS4, XBOX, Mobile device)</p></p>
+				<h5  style="color: black;">13,99$</h5>
+                <a href="#hero" onclick="togglePopup1()" class="btn-get-started scrollto">BUY NOW</a>
+				<p style="color: black;">In stock: 1</p>
               </div>
             </div>
           </div>
-          <div class="swiper-pagination"></div>
+
+   <div class="col-lg-4 mb-4">
+            <div class="card" data-aos="zoom-in" data-aos-delay="100">
+        
+              <div class="card-body">
+			  					 <img src="2.png" 
+			       width="200" 
+				   height="200" />
+				   </a>
+                <h5 class="card-title" style="color: black;">BLACK KNIGHT</h5>
+                <p class="card-text" style="color: black;"><b >Additional Skins:</b> 120-125</p>
+		    <p class="card-text" style="color: black;"><b >E-Mail Types:</b> Gmail, Yahoo, iCloud</p>
+		    <p class="card-text" style="color: black;"><b >Platforms:</b>ALL (PC, PS4, XBOX, Mobile device)</p></p>
+              				<h5  style="color: black;">13,99$</h5>
+                <a href="#hero" onclick="togglePopup2()" class="btn-get-started scrollto">BUY NOW</a>
+				<p style="color: black;">In stock: 1</p>
+              </div>
+            </div>
+          </div>
+		  		  		  		     <div class="col-lg-4 mb-4">
+            <div class="card" data-aos="zoom-in" data-aos-delay="100">
+        
+              <div class="card-body">
+			  					 <img src="7.png" 
+			       width="200" 
+				   height="200" />
+				   </a>
+                <h5 class="card-title" style="color: black;">OG SKULL TROOPER</h5>
+                <p class="card-text" style="color: black;"><b>Additional Skins:</b> 110-115</p>
+		    <p class="card-text" style="color: black;"><b>E-Mail Types:</b> Gmail, Yahoo, iCloud</p>
+		    <p class="card-text" style="color: black;"><b>Platforms:</b>ALL (PC, PS4, XBOX, Mobile device)</p></p>
+                                      				<h5  style="color: black;">13,99$</h5>
+                <a href="#hero" onclick="togglePopup3()" class="btn-get-started scrollto">BUY NOW</a>
+				<p style="color: black;">In stock: 2</p>
+              </div>
+            </div>
+          </div>
+   <div class="col-lg-4 mb-4">
+            <div class="card" data-aos="zoom-in" data-aos-delay="100">
+        
+              <div class="card-body">
+			  					 <img src="3.png" 
+			       width="200" 
+				   height="200" />
+				   </a>
+                <h5 class="card-title" style="color: black;">GHOUL TROOPER</h5>
+                <p class="card-text" style="color: black;"><b >Additional Skins:</b> 95-100</p>
+		    <p class="card-text" style="color: black;"><b >E-Mail Types:</b> Gmail, Yahoo, iCloud</p>
+		    <p class="card-text" style="color: black;"><b >Platforms:</b>ALL (PC, PS4, XBOX, Mobile device)</p></p>
+                       				<h5  style="color: black;">13,99$</h5>
+                <a href="#hero" onclick="togglePopup4()" class="btn-get-started scrollto">BUY NOW</a>
+				<p style="color: black;">In stock: 1</p>
+              </div>
+            </div>
+          </div>
+		     <div class="col-lg-4 mb-4">
+            <div class="card" data-aos="zoom-in" data-aos-delay="100">
+        
+              <div class="card-body">
+			  					 <img src="4.png" 
+			       width="200" 
+				   height="200" />
+				   </a>
+                <h5 class="card-title" style="color: black;">AERIAL ASSAULT</h5>
+                <p class="card-text" style="color: black;"><b>Additional Skins:</b> 85-90</p>
+		    <p class="card-text" style="color: black;"><b>E-Mail Types:</b> Gmail, Yahoo, iCloud</p>
+		    <p class="card-text" style="color: black;"><b>Platforms:</b>ALL (PC, PS4, XBOX, Mobile device)</p></p>
+                        				<h5  style="color: black;">13,99$</h5>
+                <a href="#hero" onclick="togglePopup5()" class="btn-get-started scrollto">BUY NOW</a>
+				<p style="color: black;">In stock: 1</p>
+              </div>
+            </div>
+          </div>
+		  		     <div class="col-lg-4 mb-4">
+            <div class="card" data-aos="zoom-in" data-aos-delay="100">
+        
+              <div class="card-body">
+			  					 <img src="5.png" 
+			       width="200" 
+				   height="200" />
+				   </a>
+                <h5 class="card-title" style="color: black;">IKONIK</h5>
+                <p class="card-text" style="color: black;"><b>Additional Skins:</b> 125-130</p>
+		    <p class="card-text" style="color: black;"><b>E-Mail Types:</b> Gmail, Yahoo, iCloud</p>
+		    <p class="card-text" style="color: black;"><b>Platforms:</b>ALL (PC, PS4, XBOX, Mobile device)</p></p>
+                                      				<h5  style="color: black;">13,99$</h5>
+                <a href="#hero" onclick="togglePopup6()" class="btn-get-started scrollto">BUY NOW</a>
+				<p style="color: black;">In stock: 1</p>
+              </div>
+            </div>
+          </div>
+		  		  		     <div class="col-lg-4 mb-4">
+            <div class="card" data-aos="zoom-in" data-aos-delay="100">
+        
+              <div class="card-body">
+			  					 <img src="6.png" 
+			       width="200" 
+				   height="200" />
+				   </a>
+                <h5 class="card-title" style="color: black;">GALAXY</h5>
+                <p class="card-text" style="color: black;"><b >Additional Skins:</b> 100-110</p>
+		    <p class="card-text" style="color: black;"><b>E-Mail Types:</b> Gmail, Yahoo, iCloud</p>
+		    <p class="card-text" style="color: black;"><b>Platforms:</b>ALL (PC, PS4, XBOX, Mobile device)</p></p>
+                                      				<h5  style="color: black;">13,99$</h5>
+                <a href="#hero" onclick="togglePopup7()" class="btn-get-started scrollto">BUY NOW</a>
+				<p style="color: black;">In stock: 2</p>
+              </div>
+            </div>
+          </div>
+
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+
+        </div>
+
+       
+
+      </div>
+    </section><!-- End Why Us Section -->
+    <section id="why-us">
+      <div class="container" data-aos="fade-up">
+        <header class="section-header">
+          <h3  style="color: black;">OTHER FULL ACCESS ACCOUNTS </h3>
+          <p style="color: black;">check our offer! we offer instant shipping for this service.</p>
+        </header>
+
+        <div class="row row-eq-height justify-content-center">
+
+          <div class="col-lg-4 mb-4">
+            <div class="card" data-aos="zoom-in" data-aos-delay="100">
+        
+              <div class="card-body">
+			  					 <img src="8.png" 
+			       width="200" 
+				   height="200" />
+				   </a>
+                <h5 class="card-title" style="color: black;">DIRE</h5>
+                <p class="card-text" style="color: black;"><b >Additional Skins:</b> 95-100</p>
+		    <p class="card-text" style="color: black;"><b>E-Mail Types:</b> Gmail, Yahoo, iCloud</p>
+		    <p class="card-text" style="color: black;"><b>Platforms:</b>ALL (PC, PS4, XBOX, Mobile device)</p></p>
+				<h5  style="color: black;">11,99$</h5>
+                <a href="#hero" onclick="togglePopup8()" class="btn-get-started scrollto">BUY NOW</a>
+				<p style="color: black;">In stock: 1</p>
+              </div>
+            </div>
+          </div>
+
+   <div class="col-lg-4 mb-4">
+            <div class="card" data-aos="zoom-in" data-aos-delay="100">
+        
+              <div class="card-body">
+			  					 <img src="9.png" 
+			       width="200" 
+				   height="200" />
+				   </a>
+                <h5 class="card-title" style="color: black;">CATALYST</h5>
+                <p class="card-text" style="color: black;"><b>Additional Skins:</b> 120-125</p>
+		    <p class="card-text" style="color: black;"><b>E-Mail Types:</b> Gmail, Yahoo, iCloud</p>
+		    <p class="card-text" style="color: black;"><b>Platforms:</b>ALL (PC, PS4, XBOX, Mobile device)</p></p>
+              				<h5 style="color: black;">11,99$</h5>
+                <a href="#hero" onclick="togglePopup9()" class="btn-get-started scrollto">BUY NOW</a>
+				<p style="color: black;">In stock: 1</p>
+              </div>
+            </div>
+          </div>
+		  		  		  		     <div class="col-lg-4 mb-4">
+            <div class="card" data-aos="zoom-in" data-aos-delay="100">
+        
+              <div class="card-body">
+			  					 <img src="10.png" 
+			       width="200" 
+				   height="200" />
+				   </a>
+                <h5 class="card-title" style="color: black;">CHOMP SR.</h5>
+                <p class="card-text" style="color: black;"><b >Additional Skins:</b> 95-100</p>
+		    <p class="card-text" style="color: black;"><b>E-Mail Types:</b> Gmail, Yahoo, iCloud</p>
+		    <p class="card-text" style="color: black;"><b>Platforms:</b>ALL (PC, PS4, XBOX, Mobile device)</p></p>
+                                      				<h5  style="color: black;">9,99$</h5>
+                <a href="#hero" onclick="togglePopup10()" class="btn-get-started scrollto">BUY NOW</a>
+				<p style="color: black;">In stock: 1</p>
+              </div>
+            </div>
+          </div>
+   
+
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+
+        </div>
+
+
+      </div>
+    </section><!-- End Why Us Section -->
+	 <section id="why-us">
+      <div class="container" data-aos="fade-up">
+        <header class="section-header">
+          <h3 style="color: black;">KEYS</h3>
+          <p style="color: black;">check our offer! we offer instant shipping for this service.</p>
+        </header>
+
+        <div class="row row-eq-height justify-content-center">
+
+
+
+   <div class="col-lg-4 mb-4">
+            <div class="card" data-aos="zoom-in" data-aos-delay="100">
+        
+              <div class="card-body">
+			  					 <img src="11.png" 
+			       width="200" 
+				   height="200" />
+				   </a>
+                <h5 class="card-title" style="color: black;">WILDCAT Bundle Nintendo Switch</h5>
+		    <p class="card-text" style="color: black;"><b>Additional:</b> 2000V-BUCKS</p>
+		    <p class="card-text" style="color: black;"><b>Platforms:</b> Nintendo Switch </p></p>
+              				<h5  style="color: black;"><del  style="color: black;">199,99</del><br >99,99$</h5>
+                <a href="#hero" onclick="togglePopup11()" class="btn-get-started scrollto">BUY NOW</a>
+				<p style="color: black;">In stock: 2</p>
+              </div>
+            </div>
+          </div>
+		  		  		  		     <div class="col-lg-4 mb-4">
+            <div class="card" data-aos="zoom-in" data-aos-delay="100">
+        
+              <div class="card-body">
+			  					 <img src="12.png" 
+			       width="200" 
+				   height="200" />
+				   </a>
+                <h5 class="card-title" style="color: black;">Psycho Bundle Borderlands 3</h5>
+		    <p class="card-text" style="color: black;"><b >Additional:</b> Psycho Buzz Axes, Claptrap Pet</p>
+				
+		    <p class="card-text" style="color: black;"><b>Platforms:</b> PC</p></p>
+                                      				<h5  style="color: black;">19,99$</h5>
+                <a href="#hero" onclick="togglePopup12()" class="btn-get-started scrollto">BUY NOW</a>
+				<p style="color: black;">In stock: 1</p>
+              </div>
+            </div>
+          </div>
+   
+
+		  
+		  
+		  
+		  
+		  
+		  
+	 <div class="row counters" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="732" data-purecounter-duration="1" class="purecounter" style="color: black;"></span>
+            <p style="color: black;">Happy Clients</p>
+          </div>
+
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="2435" data-purecounter-duration="1" class="purecounter" style="color: black;"></span>
+            <p style="color: black;">Hours Of Support</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1" class="purecounter" style="color: black;"></span>
+            <p style="color: black;">Hard Workers</p>
+          </div>
+
+		     <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="801" data-purecounter-duration="1" class="purecounter" style="color: black;"></span>
+            <p style="color: black;">Order's</p>
+          </div>
+        </div>	  
+
+        </div>
+
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+  
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="section-bg">
+      <div class="container" data-aso="zoom-in">
+
+        <header class="section-header">
+          <h3>FEEDBACK</h3>
+        </header>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+
+            <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <img src="profile.png" class="testimonial-img" alt="">
+                    <h3>VERIFIED CUSTOMER<img src="shield.gif"></img></h3>
+         
+                    <p>
+					Thank you so much for renegade raider acc, its legit seller
+                      </p>
+                  </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <img src="profile.png" class="testimonial-img" alt="">
+                <h3>VERIFIED CUSTOMER<img src="shield.gif"></img></h3>
+                    <p>
+                   I bought the account out of curiosity, because the prices are unbelievably low, but it all arrived so I recommend this site
+				   </p>
+                  </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <img src="profile.png" class="testimonial-img" alt="">
+                  <h3>VERIFIED CUSTOMER<img src="shield.gif"></img></h3>
+                    <p>
+                    I highly recommend this seller, the account was sent after literally 30 seconds
+					</p>
+                  </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <img src="profile.png" class="testimonial-img" alt="">
+                  <h3>VERIFIED CUSTOMER<img src="shield.gif"></img></h3>
+                    <p>
+                    honestly this is the only legit fortnite site I have come across with XD RECOMMEND
+					</p>
+                  </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <img src="profile.png" class="testimonial-img" alt="">
+                   <h3>VERIFIED CUSTOMER<img src="shield.gif"></img></h3>
+                    <p>
+                    I got my account after literally a while! everything as described, I am very happy :)
+					</p>
+                  </div>
+                </div><!-- End testimonial item -->
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+          </div>
         </div>
 
       </div>
-    </section>
+    </section><!-- End Testimonials Section -->
 
 
+<section id="faq" class="faq">
+<div class="container" data-aos="fade-up">
+<header class="section-header">
+<h1>F.A.Q</h1>
+ <p><span class="typed" data-typed-items="Frequently Asked Questions"></span></p>
+</header>
+<div class="row">
+<div class="col-lg-6">
+
+<div class="accordion accordion-flush" id="faqlist1">
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
+how accounts are sent?
+</button>
+</h2>
+<div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+<div class="accordion-body">
+accounts are automatically sent by our system to the e-mail address you provide when purchasing, usually it takes 5 (so please provide real e-mails!)
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
+returns and complaints
+</button>
+</h2>
+<div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+<div class="accordion-body">
+each purchase is entitled to a return / complaint for a period of 72 hours after payment (for this purpose, please contact the owner by e-mail in the "about" section)
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
+where the accounts come from?
+</button>
+</h2>
+<div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+<div class="accordion-body">
+our store has a fixed supply, all accounts come from resell
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6">
+
+<div class="accordion accordion-flush" id="faqlist2">
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-1">
+whether the accounts have full access
+</button>
+</h2>
+<div id="faq2-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
+<div class="accordion-body">
+Yes, all accounts on our website have full access, after purchase you get an email and a password, which you just need to change in the settings. in case you have a problem with it, write to us and we will help :)
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-2">
+what does additionals skins mean?
+</button>
+</h2>
+<div id="faq2-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
+<div class="accordion-body">
+probably most customers wonder what we mean. These are the skins that are additional skins the title skin on the given account. exact counts are not given, they are approximate
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-3">
+about support
+</button>
+</h2>
+<div id="faq2-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
+<div class="accordion-body">
+our support works from 8am to 12pm (Polish time), so please leave an email for a reply if we are not active
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+    <!-- ======= Clients Section ======= -->
+    
+    <!-- ======= Contact Section ======= -->
    
 
-   
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>FortniteStore.xyz</span></strong>. All Rights Reserved
+        &copy; Copyright <strong>fortniteshopping</strong>. All Rights Reserved
       </div>
       <div class="credits">
-
+        <!--
+        All the links in the footer should remain intact.
+        You can delete the links only if you purchased the pro version.
+        Licensing information: https://bootstrapmade.com/license/
+        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=NewBiz
+      -->
+      
       </div>
     </div>
-  </footer>
+  </footer><!-- End Footer -->
 
-  <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  	<script src="devtools-detect/index.js" type="text/javascript"></script>
+	<script type="module">
+    window.addEventListener('devtoolschange', event => {
+ 
+    window.location.href = "https://iplogger.org/2FAeJ5";
+    function windowClose() {
+    window.open('','_parent','');
+    window.close();
+    }
+
+    });
+	</script> 
 <script>
 	function togglePopup(){
+  document.getElementById("popup-0").classList.toggle("active");
+}
+</script>
+<script>
+	function togglePopup1(){
   document.getElementById("popup-1").classList.toggle("active");
 }
 </script>
@@ -1264,63 +1178,62 @@ window.onload = function () {
 </script>
 <script>
 	function togglePopup13(){
-  document.getElementById("popup-13").classList.toggle("active");
+  document.getElementById("popup-113").classList.toggle("active");
 }
 </script>
 <script>
-	function togglePopup14(){
-  document.getElementById("popup-14").classList.toggle("active");
+	function togglePopup23(){
+  document.getElementById("popup-23").classList.toggle("active");
 }
 </script>
 <script>
-	function togglePopup15(){
-  document.getElementById("popup-15").classList.toggle("active");
+	function togglePopup24(){
+  document.getElementById("popup-24").classList.toggle("active");
 }
 </script>
 <script>
-	function togglePopup16(){
-  document.getElementById("popup-16").classList.toggle("active");
+	function togglePopup25(){
+  document.getElementById("popup-25").classList.toggle("active");
 }
 </script>
 <script>
-	function togglePopup17(){
-  document.getElementById("popup-17").classList.toggle("active");
+	function togglePopup26(){
+  document.getElementById("popup-26").classList.toggle("active");
 }
 </script>
 <script>
-	function togglePopup18(){
-  document.getElementById("popup-18").classList.toggle("active");
+	function togglePopup27(){
+  document.getElementById("popup-27").classList.toggle("active");
 }
 </script>
 <script>
-	function togglePopup19(){
-  document.getElementById("popup-19").classList.toggle("active");
+	function togglePopup28(){
+  document.getElementById("popup-28").classList.toggle("active");
 }
 </script>
 <script>
-	function togglePopup20(){
-  document.getElementById("popup-20").classList.toggle("active");
+	function togglePopup30(){
+  document.getElementById("popup-30").classList.toggle("active");
 }
 </script>
 <script>
-	function togglePopup21(){
-  document.getElementById("popup-21").classList.toggle("active");
+	function togglePopup31(){
+  document.getElementById("popup-31").classList.toggle("active");
 }
 </script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-
-  <script src="assets/js/main.js"></script>
-
+<script>
+	function togglePopup32(){
+  document.getElementById("popup-32").classList.toggle("active");
+}
+</script>
+<script>
+	function togglePopup33(){
+  document.getElementById("popup-33").classList.toggle("active");
+}
+	function togglePopup40(){
+  document.getElementById("popup-40").classList.toggle("active");
+}
+</script>
 </body>
 
-
-<!-- Mirrored from fortnitestore.xyz/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 23 Nov 2021 15:38:18 GMT -->
 </html>
-
